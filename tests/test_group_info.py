@@ -1,6 +1,6 @@
 import unittest
 
-from pytictri import GroupInfo, PAPP_DESCRIPTION, UNIT_VA
+from async_pytictri import GroupInfo, PAPP_DESCRIPTION, UNIT_VA
 
 
 class TestGroupInfo(unittest.TestCase):
