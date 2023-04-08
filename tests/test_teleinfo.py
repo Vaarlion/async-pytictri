@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-from pytictri import Teleinfo, GroupInfo
+from async_pytictri import Teleinfo, GroupInfo
 
 
 class TestTeleinfo(unittest.TestCase):
@@ -34,7 +34,7 @@ class TestTeleinfo(unittest.TestCase):
             teleinfo._readline = mock.MagicMock()
             teleinfo._readline.side_effect = readline
 
-            frame = teleinfo.read_frame()
+            frame = await teleinfo.read_frame()
 
             group = frame.get(GroupInfo.PAPP)
 

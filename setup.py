@@ -30,8 +30,8 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='pytictri',
-    version=find_version("pytictri", "__init__.py"),
+    name='async_pytictri',
+    version=find_version("async_pytictri", "__init__.py"),
     packages=find_packages(),
     description='Teleinfo tri python library',
     long_description=long_description,
@@ -39,7 +39,7 @@ setup(
     install_requires=['requests>=2'],
     license='GPL-3',
     include_package_data=True,
-    url='https://github.com/biker91620/pytictri/tree/master',
+    url='https://github.com/Vaarlion/async_pytictri/tree/master',
     author='benblrm',
     classifiers=[
         'Programming Language :: Python',
@@ -55,7 +55,7 @@ setup(
     ],
     keywords=[
         'rest',
-        'pytictri',
+        'async_pytictri',
         'pyticcom',
         'linky',
         'tic',

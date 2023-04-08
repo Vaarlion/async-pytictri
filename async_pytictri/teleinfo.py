@@ -5,7 +5,7 @@ import sys
 import serial
 from serial import PARITY_EVEN, STOPBITS_ONE
 
-from pytictri.const import ADCO_DESCRIPTION, OPTARIF_DESCRIPTION, ISOUSC_DESCRIPTION, UNIT_A, UNIT_WH, UNIT_VA, UNIT_NONE, \
+from async_pytictri.const import ADCO_DESCRIPTION, OPTARIF_DESCRIPTION, ISOUSC_DESCRIPTION, UNIT_A, UNIT_WH, UNIT_VA, UNIT_NONE, \
     BASE_DESCRIPTION, HCHC_DESCRIPTION, HCHP_DESCRIPTION, PTEC_DESCRIPTION, IINST_DESCRIPTION, IMAX_DESCRIPTION, \
     PAPP_DESCRIPTION, HHPHC_DESCRIPTION, MOTDETAT_DESCRIPTION, \
     IINST1_DESCRIPTION, IINST2_DESCRIPTION, IINST3_DESCRIPTION, IMAX1_DESCRIPTION, IMAX2_DESCRIPTION, IMAX3_DESCRIPTION, \
@@ -150,7 +150,7 @@ class Teleinfo:
             raise NotImplemented()
         return self.__process_history_frame()
 
-    def read_frame(self):
+    async def read_frame(self):
         """Read a frame from serial port. """
         self.__wait_rcv_frame_start()
         frame = self.__process_frame()
